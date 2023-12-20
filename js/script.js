@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////////////
 // Sticky navigation
 
-const homeHeaderE1 = document.querySelector('.home__header');
+const homeHeaderE1 = document.querySelector('.header__home');
 
 /* this is used to observe an Element*/
 const observer = new IntersectionObserver(function(entries) {
