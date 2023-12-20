@@ -1,0 +1,129 @@
+$bp-largest: 93.75em; //1500px   1500px/16px = 93.75em
+$bp-largest-1: 84.38em; //1350px   1350px/16px = 84.38em
+$bp-largest-2: 75em; //1200px   1200px/16px = 75em
+$bp-large: 67.5em; //1080px   1080px/16px = 67.5em
+$bp-large-1: 62.5em; //1000px   1000px/16px = 62.5em
+$bp-large-2: 56.25em; //900px   900px/16px = 56.25em
+$bp-medium: 50em; //800px   800px/16px = 50em
+$bp-medium-1: 48.25em; //772px   772px/16px = 48.25em
+$bp-medium-2: 46.9em; //750px   750px/16px = 46.875em
+$bp-medium-size-social: 44.25em; //708px   708px/16px = 44.25em
+$bp-medium-3: 43.75em; //700px   700px/16px = 43.75em
+$bp-medium-3-h-l-s: 42.5em; //680px   680px/16px = 42.5em // --> header-left-space
+$bp-medium-3-h-m-r-s: 40em; //640px   640px/16px = 40em // --> header--media-right-space
+$bp-medium-3-h-cs-a: 38.8em; //620px   620px/16px = 38.8em // --> header--content&space-adjustment
+// $bp-medium-3: 43.75em; //700px   700px/16px = 43.75em
+$bp-small: 37.5em; //600px   600px/16px = 37.5em
+$bp-small-1: 31.25em; //500px   500px/16px = 31.25em
+
+$bp-min-1_1: 64.06em; //1025px   1025px/16px = 64.06em
+$bp-min-1: 64em; //1024px   1024px/16px = 64em
+$bp-min-2: 63.94em; //1023x   1023px/16px = 63.94em
+$bp-min-3: 51.56em; //825px   825px/16px = 51.56em
+$bp-min-4: 48.13em; //770px   770px/16px = 48.13em
+
+$bp-mobile-1: 27.19em; //435px   435px/16px = 27.19em
+$bp-mobile-2: 26em; //416px   416px/16px = 26em
+$bp-mobile-3: 24.69em; //395px   395px/16px = 24.69em
+$bp-mobile-4: 23.62em; //378px   378px/16px = 23.62em
+$bp-mobile-4: 23.62em; //378px   378px/16px = 23.62em
+$bp-mobile-5: 22.68em; //363px   363px/16px = 22.68em
+
+
+
+/* A global Reset for margin and padding, box-sizing  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* this changes the box model, so that the borders and the paddings are NO longer added to the Total Width OR the Total Height that we specify for a BOX */
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh repeat(4, min-content);
+  grid-template-columns: [full-start]1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
+  
+
+
+
+
+  // display: grid;
+  // grid-template-rows: 10vh 90vh 40vw 40vw repeat(3, min-content);
+  // grid-template-columns: 1fr repeat(10, minmax(min-content, 30rem)) ;
+
+  // @media only screen and (max-width:$bp-min-1){
+  //   grid-template-rows: 10vh 34vh 40vw 40vw repeat(3, min-content);
+  // }
+  
+  // @media only screen and (max-width:$bp-min-2){
+  //   grid-template-rows: 10vh 90vh 40vw 40vw repeat(3, min-content);
+  // }
+
+  // @media only screen and (max-width:$bp-min-3){
+  //   grid-template-rows: 10vh 41vh 40vw 40vw repeat(3, min-content);
+  // }
+
+  // @media only screen and (max-width:$bp-min-4){
+  //   grid-template-rows: 10vh 48vh 40vw 40vw repeat(3, min-content);
+  // }
+
+  // @media only screen and (max-width: $bp-mobile-1){
+  //   grid-template-rows: 10vh 54vh 40vw 40vw repeat(3, min-content);
+  // }
+
+  // @media only screen and (max-width: $bp-mobile-2){
+  //   grid-template-rows: 10vh 56vh 40vw 40vw repeat(3, min-content);
+  // }
+
+  // @media only screen and (max-width: $bp-mobile-3){
+  //   grid-template-rows: 10vh 60vh 40vw 40vw repeat(3, min-content);
+  // }
+
+  // @media only screen and (max-width: $bp-mobile-4){
+  //   grid-template-rows: 10vh 79vh 40vw 40vw repeat(3, min-content);
+  // }
+
+  // @media only screen and (max-width: $bp-mobile-5){
+  //   grid-template-rows: 10vh 70vh 40vw 40vw repeat(3, min-content);
+  // }
+
+  // @media only screen and (max-width: $bp-small-1){
+  //   grid-template-rows: 10vh 90vh 40vw 40vw repeat(3, min-content);
+  // }
+}
+
+/*
+$breakpoint arguement choices:
+ - Phone 
+ - tab-port
+ - tab-land
+ - big-desktop
+
+ ORDER: base + typography > general layout + grid > page layout > components
+*/
+
+html {
+    // this font size percentage translate to 1rem and 1rem = 10px
+    font-size: 62.5%; // there for 62.5% is 10px which is derived from 10px/16px = 62.5%
+    
+    
+    @include respond(big-desktop) {
+      font-size: 75%; //if you want 1rem to be 12px then it will be 12px/16px = 75%
+    }
+    
+    @include respond(tab-land) { //width < 1200
+      font-size: 56.25%; //if you want 1rem to be 9px then it will be 9px/16px = 56.25%
+    }
+    
+    @include respond(tab-port) { //width < 900
+      font-size: 50%; //if you want 1rem to be 8px then it will be 8px/16px = 50%
+    }
+    
+    // @include respond(phone) { // < 600px
+    //   font-size: 30%; //if you want 1rem to be 5px then it will be 5px/16px = 50%
+    // }
+    
+  }
+
+
+  

@@ -1,0 +1,102 @@
+.sticky .home__navbar{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 9999;
+  box-shadow: 0 1.2rem 3.2rem rgba(52, 51, 51, 0.03);
+}
+
+.home{
+
+  &__navbar {
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    background-color: $color-white-light-1;
+    height: 8rem;
+    opacity: 0.5;
+    width: 100%;
+
+    &__menu{
+      flex: 1;
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+    }
+  
+    &__logo{
+      padding-left: 5rem;
+  
+      &__img {
+          height: 3.2rem;
+      }
+    }
+  
+    &__nav{
+      
+      &__wrapper{
+          align-items: center;
+          display: flex;
+          flex-direction: row;
+          margin-right: 10rem;
+
+          @include respond(phone){
+            display: none;
+          }
+  
+          &__nav-link{
+              margin-top: 10px;
+              margin-left: 15px;
+              margin-right: 15px;
+              padding: 15px 10px;
+              font-weight: 500;
+              transition-property: all;
+          }
+      }
+  
+      &__wrapper a{
+          color: $color-white-black-1;
+          text-transform: capitalize;
+          font-size: 1.9rem;
+          text-decoration: none;
+          transition: color .3s;
+      }
+    }
+  
+    /*****************************/
+      /* MOBILE NAVIGATION */
+    /*****************************/
+    &__btn-mobile-nav{
+      border: none;
+      background: none;
+      cursor: pointer;
+      margin-top: 1rem;
+      margin-right: 2rem;
+      display: none;
+
+      @include respond(phone){
+        display: block;
+      }
+    }
+
+    &__icon-mobile-nav{
+      height: 4.8rem;
+      width: 4.8rem;
+      color: #333;
+    }
+
+    /*Selecting an Element with the Element's Attribute*/
+    &__icon-mobile-nav[name ="close-outline"]{
+      display: none;
+    }
+  }
+}

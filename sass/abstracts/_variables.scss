@@ -1,0 +1,21 @@
+//Colors
+$color-white: #ffff;
+$color-white-light-1: rgba(239, 236, 236, 0.1);
+$color-white-black-1: black;
+$color-grey-dark: #777;
+
+//FONT
+$default-font-size: 1.6rem;
+
+//Grid
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 8rem;
+
+
+//RESPONSIVE BEREAKPOINTS VARIABLES
+$bp-largest: 75em; // 1200PX /16PX = 75. This is for 1200px screen size resolution. 16px is the default font-size for a browser
+$bp-large: 62.5em; // 1000PX /16PX = 62.5
+$bp-medium: 50em; // 800PX /16PX = 50
+$bp-small: 37.5em; // 600PX /16PX = 37.5

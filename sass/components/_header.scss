@@ -1,0 +1,244 @@
+.header {
+  background-color: white;
+  grid-column: full-start/ full-end;
+  grid-row: 1/ 3;
+
+  &__home {
+    background-image: linear-gradient(
+        rgba(24, 24, 24, 0),
+        rgba(24, 24, 24, 0.266)
+      ),
+      url(/img/tsax-28.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns:
+      [full-start]1fr [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      [center-end] 1fr [full-end];
+
+    &__content {
+      grid-column: col-start 1 / col-end 8;
+      margin-top: 18rem;
+      z-index: 4;
+
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+
+      &__banner-1 {
+        grid-column: 1 / 5;
+        margin: 0 auto;
+      }
+
+      &__banner-2 {
+        grid-column: 5 / 7;
+        margin: 7rem auto;
+      }
+    }
+
+    &__heading-title {
+      color: white;
+      line-height: 1em;
+      letter-spacing: 0.05em;
+      text-transform: capitalize;
+      width: 55rem;
+    }
+
+    &__heading-1 {
+      font-size: 7rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    &__heading-2 {
+      font-size: 3.9rem;
+      font-weight: 500;
+      margin-left: 1.5rem;
+      line-height: 5rem;
+      margin-bottom: 2rem;
+    }
+
+    &__heading-3{
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-left: 1.9rem;
+        line-height: 2rem;
+        margin-bottom: 4.8rem; 
+        text-transform: none; 
+    }
+
+    &__btn{
+        display: flex;
+        grid-column-gap: 35px;
+        margin-left: 2.4rem;
+    }
+
+    &__btn--link{
+        color: white;
+        text-align: center;
+        white-space: nowrap;
+        border-radius: 4.7rem;
+        padding: 1.2rem 4rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1em;
+        cursor: pointer;
+        text-transform: capitalize;
+        transition: all .3s; 
+    }
+
+    &__about--btn{
+        border: 1px solid rgb(42, 42, 42);
+        background-color: rgba(113, 108, 108, 0.763);
+    }
+
+    &__bookings--btn{
+        border: 1px solid rgb(95, 94, 94);
+        background-color: rgba(242, 232, 232, 0.728);
+        color: black;
+        font-weight: 700;
+    }
+
+    &__about--btn:hover{
+        border-color: white;
+        opacity: 1;
+        background-color: rgba(96, 96, 96, 0);
+    }
+
+    &__bookings--btn:hover{
+        border: 1px solid rgb(133, 130, 130);
+        background-color: rgba(96, 96, 96, 0.293);
+        color: white;
+    }
+
+    &__video--link {
+        text-decoration: none;  
+        margin-top: 4rem;
+    }
+ 
+    &__btn--play{
+        width: 8rem;
+        height: 8rem;
+        border: 1px solid white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        margin: 12rem -4rem;
+        cursor: pointer;
+        transition: all .2s cubic-bezier(.755, .05, .855, .06);
+    }
+
+    &__btn--border{
+        width: 8rem;
+        height: 8rem;
+        border: .1rem solid rgba(255, 255, 255, .5);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        margin: 14rem 8rem;
+        position: absolute;
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transition: all .3s cubic-bezier(.755, .05, .855, .06);
+        transform-style: preserve-3d;
+    }
+
+    &__btn--text{
+        font-size: 2rem;
+        color: white;
+    }
+
+    &__btn--play:hover{
+        background-color: rgba(227, 224, 224, 0.5);
+    }
+
+    &__btn--border:hover {
+        transform: translate3d(0px, 0px, 0px) scale3d(1.2, 1.2, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+    }
+
+    &__links{
+        grid-column: full-start  / full-end;
+
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 5.5rem;
+        left: 1.5rem;
+        right: 1.5rem;
+        z-index: 4;
+        height: 4rem;
+
+        &__social--wrapper {
+            z-index: 1;
+            color: white;
+            font-size: 1.8rem;
+            line-height: 1.5em;
+            display: flex;
+            position: relative;
+            margin-left: 11rem;
+        }
+
+        &__media--wrapper {
+            z-index: 1;
+            color: white;
+            font-size: 1.8rem;
+            line-height: 1.5em;
+            display: flex;
+            position: relative;
+            margin-left: 25rem;
+            align-items: center;
+            margin-right: 15rem;
+            margin-top: -2rem;
+        }
+
+        &__media--wrapper a {
+            text-decoration: none;
+        }
+
+        &__footer--follow{
+            margin-right: 2rem;
+        }
+
+        &__footer--link{
+            margin-right: 3rem;
+            font-family: "Fa brands 400", sans-serif;
+            font-size: 1.9rem;
+            text-decoration: none;
+            transition: all .3s;
+            padding-top: 0.29rem;
+        }
+
+        &__footer--link.white{
+            color: white
+        }
+
+        &__media--youtube{
+            width: 15rem;
+            margin-right: 2rem;
+        }
+
+        &__media--spotify{
+            height: 10rem;
+            width: 16rem;
+        }
+
+    }
+  }
+
+  &__mask {
+    display: flex;
+    position: absolute;
+    inset: 0rem;
+    background-image: var(--mask-gradient, linear-gradient(to top, black, rgba(0, 0, 0, 0) 1px));
+    z-index: 2;
+  }
+}

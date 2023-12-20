@@ -1,0 +1,10 @@
+/* All Properties in this CSS Rule will get Inherited by all the Child Elements in the body Element */
+body {
+  font-family: 'Syne', sans-serif;
+    font-weight: 400;
+    font-size: $default-font-size;
+    line-height: 1.7;
+    color: $color-grey-dark;
+
+  }
+  

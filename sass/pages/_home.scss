@@ -1,0 +1,43 @@
+.home {
+  &__navbar {
+    background-color: white;
+    grid-column: 1/ -1;
+    grid-row: 1;
+    z-index: 4444444;
+    opacity: .97;
+  }
+
+  &__header {
+    grid-column: 1/ -1;
+    grid-row: 1/3;
+  }
+
+  &__music {
+    background-color: aqua;
+    grid-column: 1/ -1;
+    grid-row: 3;
+  }
+
+  &__video {
+    background-color: olivedrab;
+    grid-column: 1/ -1;
+    grid-row: 4;
+  }
+
+  &__about {
+    background-color: chocolate;
+    grid-column: 1/ -1;
+    grid-row: 5;
+  }
+
+  &__bookings {
+    background-color: rosybrown;
+    grid-column: 1/ -1;
+    grid-row: 6;
+  }
+
+  &__footer {
+    background-color: thistle;
+    grid-column: 1/ -1;
+  }
+}
