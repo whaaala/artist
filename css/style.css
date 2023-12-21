@@ -407,8 +407,33 @@ body {
     display: none; }
 
 .videos {
-  background-color: olivedrab;
-  grid-column: full-start / full-end; }
+  background-color: rgba(252, 247, 247, 0.289);
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
+  .videos__heading {
+    grid-column: center-start / center-end; }
+    .videos__heading__center-heading {
+      text-align: center; }
+  .videos__video {
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 2.4rem;
+    grid-column-gap: .5rem;
+    padding: 1.5rem 3rem; }
+    .videos__video__card {
+      height: 25.3rem;
+      width: 45rem;
+      border-radius: 1rem; }
+  .videos__action {
+    grid-column: center-start / center-end; }
+    .videos__action__center {
+      text-align: center; }
+    .videos__action__btn {
+      font-size: 2.5rem !important;
+      margin-top: 2rem;
+      margin-bottom: 6rem; }
 
 .sticky .home__navbar {
   position: fixed;
