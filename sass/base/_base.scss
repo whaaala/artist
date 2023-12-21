@@ -130,7 +130,7 @@ html {
   }
 
   .u-margin-bottom-small {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem !important;
   }
 
   .heading-secondary {
@@ -179,3 +179,17 @@ html {
       transform: translateY(0);
     }
   }
+
+  .action {
+    grid-column: center-start / center-end;
+
+    &__center{
+        text-align: center;
+    }
+
+    &__btn{
+        font-size: 2.5rem !important;
+        margin-top: 2rem;
+        margin-bottom: 6rem;
+    }
+}
