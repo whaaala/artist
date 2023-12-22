@@ -1,4 +1,129 @@
 .bookings {
-    background-color: rosybrown;
     grid-column: center-start / center-end;
+
+    &__home {
+        &__center-heading {
+            text-align: center;
+        }
+
+        &__heading {
+            margin-bottom: 0.1rem !important;
+        }
+
+        &__heading-text{
+            margin-bottom: 3rem;
+        }
+
+        &__content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            &__image{
+                margin: 0 0 0 6rem;  
+            }
+
+            &__image-img{
+                width: 48rem;
+                object-fit: cover;
+                border-radius: 2%;
+                box-shadow: 0 2.4rem 4.8rem rgba(0,0,0,0.15);
+            }
+
+            &__container {
+                display: grid;
+                box-shadow: 0 2.4rem 4.8rem rgba(0,0,0,0.15);
+                border-radius: 2%;
+                margin-bottom: 1rem;
+            
+                &__form {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    margin-top: 5rem ;
+                  
+
+                    &__label {
+                        position: absolute;
+                        top: -2.5rem;
+                        left: 20rem;
+                        opacity: 1;
+                        color: black;
+                        font-size: 1.8rem;
+                        font-weight: 400;
+                        text-transform: capitalize;
+                        letter-spacing: .13rem;
+                        line-height: 1.5rem;
+                        -webkit-transition: 0.2s all;
+                        transition: 0.2s all;
+                    }
+    
+                    &__label__col {
+                        left: 5rem !important;
+                    }
+    
+                    & input {
+                        width: 100%;
+                        padding: 1.2rem;
+                        font-size: 1.8rem;
+                        font-family: inherit;
+                        color: inherit;
+                        border: none;
+                        background-color:  #fcf9f6;
+                        border-radius: 9px;
+                        box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+                    }
+
+                    &__item--col{
+                        position: relative;
+                        margin: 0rem 1rem 3rem 1rem;
+                    }
+    
+                    &__item--col-2 {
+                        position: relative;
+                        grid-column: 1 / span 2;
+                        margin: 1rem 1rem 3rem 1rem;
+                    }
+
+                    & select {
+                        width: 100%;
+                        padding: 1.2rem;
+                        font-size: 1.8rem;
+                        font-family: inherit;
+                        color: inherit;
+                        border: none;
+                        background-color: #fcf9f6;
+                        border-radius: 9px;
+                        box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+                    }
+
+                    &__btn-ctn {
+                        grid-column: 1 / span 2;
+                        margin: 0 auto;
+
+                        &__btn{
+                            background-color: #45260a;
+                            color: #fcf9f6;
+                            align-self: end;
+                            padding: 1.2rem;
+                            display: inline-block;
+                            font-size: 2rem;
+                            font-weight: 600;
+                            padding: 1.6rem 3.2rem;
+                            border-radius: 9px;
+                            text-decoration: none;
+                            border: none;
+                            cursor: pointer;
+                            font-family: inherit;
+                            transition: all 0.3s;
+                        }
+
+                        &__btn:hover{
+                            background-color: #4a4d4a;
+                            color: #ffff;;
+                        }
+                    }
+                } 
+            }
+            
+        }
+    }
 }
