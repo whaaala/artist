@@ -125,6 +125,7 @@
                       <a href="#" class="btn-text">Read more &rarr;</a>
                   </div>
             </div>
+
             <div class="about__home__content__composition">
                 <img src="/img/show-real_2.jpg" alt="" class="about__home__content__composition__photo  about__home__content__composition__photo--p1">
 
@@ -229,7 +230,85 @@
     </section>
 
     <section class="bookings">
-        Booking
+        <div class="bookings__home__center-heading">
+            <h2 class="heading-secondary bookings__home__heading">Booking Inquiry</h2>
+            <h3 class="bookings__home__heading-text">Kindly complete the form below to inquire my services</h3>
+        </div>
+
+        <div class="bookings__home__content">
+            <div class="bookings__home__content__image">
+                <img src="img/tsax_25.jpeg" alt="" class="bookings__home__content__image-img">
+            </div>
+
+            <div class="bookings__home__content__container">
+                <form class="bookings__home__content__container__form" name="booking">
+                    <div class="bookings__home__content__container__form__item--col">
+                        <label for="event-name"  class="bookings__home__content__container__form__label bookings__home__content__container__form__label__col">Event Name</label>
+                        <input id="event-name" type="text" placeholder="Please enter the event name" name="event-name" >
+                    </div>
+    
+                    <div class="bookings__home__content__container__form__item--col">
+                        <label for="event-venue"  class="bookings__home__content__container__form__label bookings__home__content__container__form__label__col">Event Venue</label>
+                        <input id="event-venue" type="text" placeholder="Please enter the event venue" name="event-venue" >
+                    </div>
+    
+                    <div class="bookings__home__content__container__form__item--col-2">
+                        <label for="event-address"  class="bookings__home__content__container__form__label">Venue Address</label>
+                        <input id="event-address" type="text" placeholder="Please enter the venue address" name="event-address" required >
+                    </div>
+    
+                    <div class="bookings__home__content__container__form__item--col  u-margin-top-small">
+                        <label for="event-datetime" class="bookings__home__content__container__form__label bookings__home__content__container__form__label__col">Event date</label>
+                        <input id="event-datetime" type="datetime-local" name="event-datetime" required>
+                    </div>
+    
+                    <div class="bookings__home__content__container__form__item--col  u-margin-top-small">
+                        <label for="full-name"  class="bookings__home__content__container__form__label bookings__home__content__container__form__label__col">Full Name</label>
+                        <input id="full-name" type="text" placeholder="John Smith" name="full-name" required>
+                    </div>
+                      
+                    <div class="bookings__home__content__container__form__item--col  u-margin-top-small">
+                        <label for="phone"  class="bookings__home__content__container__form__label bookings__home__content__container__form__label__col">Phone number</label>
+                        <input id="phone" type="text" placeholder="+44111111111" name="phone" required>
+                    </div>
+                      
+                    <div class="bookings__home__content__container__form__item--col u-margin-top-small">
+                        <label for="email"  class="bookings__home__content__container__form__label bookings__home__content__container__form__label__col">Email Address</label>
+                        <input id="email" type="email" placeholder="me@example.com" name="email" required">
+                    </div>
+    
+                    <div class="bookings__home__content__container__form__item--col u-margin-top-small">
+                        <label for="select-where"  class="bookings__home__content__container__form__label bookings__home__content__container__form__label__col">Type of service</label>
+                        <select id="select-where" name="select-where" required>
+                          <option value="">Please choose one option:</option>
+                          <option value="firends and family">Saxophone Performance</option>
+                          <option value="youtube">Trumpet Performance</option>
+                          <option value="podcast">Live Band Performance</option>
+                          <option value=facebook">Studio Session</option>
+                          <option value="others">Music Lessons</option>
+                        </select>
+                    </div>
+    
+                    <div class="bookings__home__content__container__form__item--col u-margin-top-small">
+                        <label for="select-where"  class="bookings__home__content__container__form__label bookings__home__content__container__form__label__col">know me from?</label>
+                        <select id="select-where" name="select-where" required>
+                          <option value="">Please choose one option:</option>
+                          <option value="firends and family">firends and family</option>
+                          <option value="youtube">YouTube video</option>
+                          <option value="podcast">Podcast</option>
+                          <option value=facebook">Facebook ad</option>
+                          <option value="others">others</option>
+                        </select>
+                    </div>
+                    <div class="bookings__home__content__container__form__btn-ctn">
+                        <button class="bookings__home__content__container__form__btn-ctn__btn">Book now</button>
+                    </div>
+                </form>
+            </div>
+            <!-- <div class="bookings__home__content__form-container">
+
+            </div> -->
+        </div>
     </section>
 
     <section class="footer">
