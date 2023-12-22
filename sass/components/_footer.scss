@@ -1,4 +1,69 @@
 .footer {
-    background-color: thistle;
+    background-color: rgba(245, 241, 245, 0.521);
     grid-column: full-start / full-end;
+    margin-top: 3rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    &__logo-container{
+        &__logo {
+            &__img {
+                width: 7rem;
+                margin-top: 2rem;
+                margin-left: 50%;
+            }
+        }
+    }
+
+    &__middle {
+        display: flex;
+        flex-direction: column;
+
+        &__nav{
+            &__wrapper {
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                margin: 0 auto;
+                margin-left: 7%;
+
+                &__nav-link {
+                    color: black;
+                    text-transform: capitalize;
+                    font-size: 1.9rem;
+                    text-decoration: none;
+                    transition: color .3s;
+                    margin-top: 1rem;
+                    margin-left: 1.5rem;
+                    margin-right: 1.5rem;
+                    padding: 1.5rem 1rem;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        &__text {
+            margin: 4% auto;
+            font-size: 1.8rem;
+            line-height: 1.5em;
+        }
+        
+    }
+
+    &__social--wrapper{
+        margin-top: 2rem;
+        margin-left: 30%;
+
+        &__link {
+            color: #38214a;
+            margin-left: 2rem;
+            text-decoration: none;
+            font-size: 2.3rem;
+        }
+
+        &__link:hover {
+            color:rgba(148, 100, 208, 0.81);
+        }
+    }
 }
