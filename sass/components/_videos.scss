@@ -1,6 +1,8 @@
 .videos {
     background-color: $color-white-1;
     grid-column: full-start / full-end;
+    height: 100vh;
+    margin-bottom: 7rem;
 
     display: grid;
     grid-template-columns:[full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])[center-end] 1fr [full-end];
@@ -11,6 +13,11 @@
         &__center-heading {
             text-align: center;
         }
+
+    }
+    
+    .sticky &__heading {
+        margin-top: 7rem;
     }
 
     &__video {
@@ -27,6 +34,14 @@
             width: 45rem;
             border-radius: 1rem;
         }
+
+        .sticky &__card {
+            height: 23rem;
+        }
+    }
+
+    .sticky &__video {
+        margin-top: -1rem;
     }
     
     &__action {

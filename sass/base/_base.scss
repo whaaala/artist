@@ -144,6 +144,10 @@ html {
     margin: 3rem 0;
   }
 
+  .sticky  .heading-secondary {
+    margin: 1rem 0;
+  }
+
   .heading-tertiary {
     font-weight: 700;
     text-transform: uppercase;
@@ -191,9 +195,14 @@ html {
         text-align: center;
     }
 
+    .sticky &__center{
+      margin-top: -3rem;
+    }
+
     &__btn{
         font-size: 2.5rem !important;
         margin-top: 2rem;
         margin-bottom: 6rem;
     }
 }
+

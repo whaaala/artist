@@ -2,6 +2,7 @@
     background-color: rgba(229, 249, 249, 0.193);
     grid-column: full-start / full-end;
 
+
     display: grid;
     grid-template-columns:[full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])[center-end] 1fr [full-end];
 
@@ -13,12 +14,17 @@
         }
     }
 
+    .sticky &__heading {
+      margin-top: 6.5rem;
+      margin-bottom: -1rem;
+    }
+
     &__picture{
         grid-column: full-start / full-end;
 
         display: grid;
         grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(7, 5vw);
+        grid-template-rows: repeat(7, 3vw);
         gap: 1.5rem;
         padding: 1.5rem;
 
@@ -77,5 +83,15 @@
             display: block; // make it a block element 
             border-radius: .7rem;
         }
+    }
+
+    .sticky &__picture{
+      grid-template-rows: repeat(7, 9vh);
+      gap: 0.9rem;
+      padding: 0rem 1.5rem;
+    }
+
+    .sticky &__action {
+      margin-top: 2.4rem;
     }
 }
