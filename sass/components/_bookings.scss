@@ -1,10 +1,19 @@
 .bookings {
     grid-column: center-start / center-end;
+    height: 100vh;
     margin-bottom: 2rem;
 
+    .sticky & {
+        margin-bottom: -9rem;
+    }
+    
     &__home {
         &__center-heading {
             text-align: center;
+        }
+
+        .sticky &__center-heading {
+            margin-top: -3.5rem;
         }
 
         &__heading {
@@ -15,6 +24,10 @@
             margin-bottom: 3rem;
         }
 
+        .sticky &___heading-text {
+            margin-bottom: 1.5rem;
+        }
+
         &__content {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -23,11 +36,19 @@
                 margin: 0 0 0 6rem;  
             }
 
+            .sticky &__image{
+                margin: 0 0 0 13rem;  
+            }
+
             &__image-img{
                 width: 48rem;
                 object-fit: cover;
                 border-radius: 2%;
                 box-shadow: 0 2.4rem 4.8rem rgba(0,0,0,0.15);
+            }
+
+            .sticky &__image-img{
+                width: 42rem;  
             }
 
             &__container {
@@ -56,6 +77,10 @@
                         -webkit-transition: 0.2s all;
                         transition: 0.2s all;
                     }
+
+                    .sticky &__label {
+                        font-size: 1.5rem; 
+                    }
     
                     &__label__col {
                         left: 5rem !important;
@@ -71,6 +96,11 @@
                         background-color:  #ececec;
                         border-radius: 9px;
                         box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+                    }
+
+                    .sticky & input {
+                        padding: 1.1rem;
+                        font-size: 1.5rem;
                     }
 
                     &__item--col{
@@ -96,6 +126,11 @@
                         box-shadow: 0 1px 2px rgba(0,0,0,0.10);
                     }
 
+                    .sticky & select {
+                        padding: 1.1rem;
+                        font-size: 1.5rem;
+                    }
+
                     &__btn-ctn {
                         grid-column: 1 / span 2;
                         margin: 0 auto;
@@ -117,14 +152,26 @@
                             transition: all 0.3s;
                         }
 
+                        .sticky  &__btn{
+                            font-size: 1.5rem;
+                        }
+
                         &__btn:hover{
                             background-color: #4a4d4a;
                             color: #ffff;;
                         }
                     }
+                    
+                    .sticky &__btn-ctn {
+                        margin-top: -1rem;
+                        margin-bottom: 1rem;
+                    }
                 } 
             }
             
+            .sticky &__container {
+                width: 90%;
+            }
         }
     }
 }
