@@ -23,15 +23,15 @@
     <nav class="navbar">
         <div class="navbar__menu">
             <div class="navbar__logo">
-                <a href="/">
+                <a href="#">
                     <img src="img/tsax-logo-removebg-1-removebg-preview.png" loading="lazy" alt="artist logo"  class="home__navbar__logo__img">
                 </a>    
             </div>
             <div class="navbar__nav">
                 <div class="home__navbar__nav__wrapper">
-                    <a href="#music" class="home__navbar__nav__wrapper__nav-link">About</a>
+                    <a href="#about" class="home__navbar__nav__wrapper__nav-link">About</a>
                     <a href="#video" class="home__navbar__nav__wrapper__nav-link">Video</a>
-                    <a href="#about" class="home__navbar__nav__wrapper__nav-link">Gallery</a>
+                    <a href="#gallery" class="home__navbar__nav__wrapper__nav-link">Gallery</a>
                     <a href="#contact" class="home__navbar__nav__wrapper__nav-link">Contact</a>
                 </div>
             </div>
@@ -56,8 +56,8 @@
                         The melodious notes of the saxophone have been the backdrop of tsax life's journey
                     </h3>
                     <div class="header__home__btn">
-                        <a  class="header__home__btn--link header__home__about--btn">about me</a>
-                        <a class="header__home__btn--link header__home__bookings--btn">bookings</a>
+                        <a href="#about" class="header__home__btn--link header__home__about--btn">about me</a>
+                        <a href="#booking" class="header__home__btn--link header__home__bookings--btn">bookings</a>
                     </div>
                 </div>
 
@@ -100,7 +100,7 @@
         <div class="header__mask"></div>
     </header>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="about__home__center-heading">
             <h2 class="heading-secondary">all about me</h2>
         </div>
@@ -121,7 +121,7 @@
                     My journey as a professional saxophonist commenced in 2007 when I decided to pursue my lifelong passion for music as a career. This decision marked the inception of a journey filled with both challenges and achievements. I began by honing my saxophone skills, dedicating countless hours to practice and musical education.
                   </p>
 
-                  <div class="u-margin-bottom-big">
+                  <div>
                       <a href="#" class="btn-text">Read more &rarr;</a>
                   </div>
             </div>
@@ -136,12 +136,13 @@
         </div>
     </section>
 
-    <section class="videos">
+    <section class="videos" id="video">
         <div class="videos__heading">
             <div class="videos__heading__center-heading">
              <h2 class="heading-secondary u-margin-bottom-small">my videos</h2>
             </div>
         </div>
+
         <div class="videos__video">
             <div>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/KSYa0z-ZN6I?si=BfaQefRbGJuRvjEh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="videos__video__card"></iframe>
@@ -167,14 +168,15 @@
                 <iframe src="https://www.youtube.com/embed/6Js_7H6a-gU?si=LWkUIIZcxQ3VIPpV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="videos__video__card"></iframe>
             </div>
         </div>
-        <div class="action">
+
+        <div class="action u-margin-bottom-big">
             <div class="action__center">
                 <a href="#" class="btn-text action__btn">View more videos &rarr;</a>
             </div>
         </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <div class="gallery__heading">
             <div class="gallery__heading__center-heading">
              <h2 class="heading-secondary u-margin-bottom-small">my Gallery</h2>
@@ -221,15 +223,15 @@
 
         </div>
 
-        <div class="action">
-            <div class="action__center">
+        <div class="action gallery__action">
+            <div class="action__center u-margin-bottom-big"">
                 <a href="#" class="btn-text action__btn">View more pictures &rarr;</a>
             </div>
         </div>
 
     </section>
 
-    <section class="bookings">
+    <section class="bookings" id="booking">
         <div class="bookings__home__center-heading">
             <h2 class="heading-secondary bookings__home__heading">Booking Inquiry</h2>
             <h3 class="bookings__home__heading-text">Kindly complete the form below to inquire my services</h3>
