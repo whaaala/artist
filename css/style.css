@@ -32,6 +32,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
   grid-template-rows: 100vh repeat(4, min-content);
   grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
 
+.container.other {
+  grid-template-rows: 10vh repeat(3, min-content) !important; }
+
 /*
 $breakpoint arguement choices:
  - Phone 
@@ -60,7 +63,10 @@ html {
   margin-bottom: 1.5rem !important; }
 
 .u-margin-top-small {
-  margin-top: 1rem !important; }
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-top-big {
+  margin-top: 5rem !important; }
 
 .heading-secondary {
   font-size: 3.9rem;
@@ -112,6 +118,15 @@ html {
     font-size: 2.5rem !important;
     margin-top: 2rem;
     margin-bottom: 6rem; }
+
+.sticky__nav {
+  position: fixed; }
+
+.image-height {
+  height: 32rem !important; }
+
+.image-height_x {
+  height: 34rem !important; }
 
 /* All Properties in this CSS Rule will get Inherited by all the Child Elements in the body Element */
 body {
@@ -1416,3 +1431,137 @@ body {
 .home__footer {
   background-color: thistle;
   grid-column: 1/ -1; }
+
+.sticky .about-page__header {
+  position: fixed;
+  margin-top: 8rem; }
+
+.about-page {
+  background-color: rgba(252, 247, 247, 0.289);
+  grid-column: full-start / full-end;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
+  .about-page__header {
+    grid-column: full-start / full-end;
+    background-image: linear-gradient(rgba(24, 24, 24, 0), rgba(24, 24, 24, 0.266)), url(/img/tsax-18.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 70vh;
+    margin-top: -19rem; }
+  .about-page__bio__intro {
+    grid-column: center-start / center-end;
+    margin: 1.5rem -8rem;
+    text-align: justify;
+    font-size: 1.8rem; }
+    .about-page__bio__intro span {
+      font-weight: bold; }
+  .about-page__bio__journey {
+    grid-column: center-start / center-end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1rem; }
+    .about-page__bio__journey__image {
+      grid-column: 1; }
+      .about-page__bio__journey__image__img {
+        width: 36rem;
+        object-fit: cover;
+        border-radius: 2%;
+        box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+        margin-left: 11rem; }
+    .about-page__bio__journey__content {
+      grid-column: 2;
+      margin-left: -6rem;
+      margin-right: 5rem; }
+      .about-page__bio__journey__content__header {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        margin-bottom: 1rem;
+        letter-spacing: .1rem;
+        text-align: justify;
+        font-weight: 700;
+        margin-top: 0.3rem;
+        text-transform: capitalize; }
+      .about-page__bio__journey__content__text {
+        font-size: 1.6rem;
+        line-height: 2.46rem;
+        margin-bottom: 3.5rem;
+        letter-spacing: .1rem;
+        margin-top: 0.3rem;
+        text-align: justify; }
+      .about-page__bio__journey__content__text:last-child {
+        margin-bottom: 1rem; }
+  .about-page__bio__solo {
+    grid-column: full-start / full-end;
+    background-color: rgba(12, 12, 13, 0.021);
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
+    .about-page__bio__solo__header {
+      grid-column: center-start / center-end;
+      margin: 0 auto;
+      font-size: 3.5rem;
+      font-weight: 500;
+      text-transform: capitalize;
+      margin-top: 1rem; }
+    .about-page__bio__solo__content {
+      grid-column: center-start / center-end;
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+      .about-page__bio__solo__content__image {
+        grid-column: 1; }
+        .about-page__bio__solo__content__image__img {
+          width: 60rem;
+          object-fit: cover;
+          border-radius: 2%;
+          box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+          margin-left: -5rem;
+          height: 39rem; }
+      .about-page__bio__solo__content__section {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem; }
+        .about-page__bio__solo__content__section__text {
+          font-size: 1.6rem;
+          line-height: 2.46rem;
+          margin-bottom: 3.5rem;
+          letter-spacing: .1rem;
+          margin-top: 0.3rem;
+          text-align: justify;
+          margin-right: -5rem; }
+        .about-page__bio__solo__content__section__text:first-child {
+          margin-top: 2.7rem; }
+        .about-page__bio__solo__content__section__text:last-child {
+          margin-bottom: 1rem; }
+      .about-page__bio__solo__content__section-1 {
+        grid-column: 1;
+        margin-left: 2rem; }
+        .about-page__bio__solo__content__section-1__text {
+          font-size: 1.6rem;
+          line-height: 2.46rem;
+          margin-bottom: 3.5rem;
+          letter-spacing: .1rem;
+          margin-right: 1rem;
+          text-align: justify;
+          margin-left: -7rem; }
+        .about-page__bio__solo__content__section-1__text:first-child {
+          margin-top: 4rem; }
+        .about-page__bio__solo__content__section-1__text:last-child {
+          margin-bottom: 1rem; }
+      .about-page__bio__solo__content__image-1 {
+        grid-column: 2;
+        margin-left: 2rem; }
+        .about-page__bio__solo__content__image-1__img-1 {
+          width: 58rem;
+          object-fit: cover;
+          object-position: top;
+          border-radius: 2%;
+          box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+          margin-right: -8rem;
+          height: 40rem; }
+    .about-page__bio__solo__content:last-child {
+      margin-bottom: 2rem; }
+  .about-page__footer {
+    grid-row: 5; }
