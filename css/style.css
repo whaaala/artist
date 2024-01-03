@@ -1494,7 +1494,7 @@ body {
         margin-bottom: 1rem; }
   .about-page__bio__solo {
     grid-column: full-start / full-end;
-    background-color: rgba(12, 12, 13, 0.021);
+    background-color: rgba(102, 234, 50, 0.02);
     margin-top: 2rem;
     display: grid;
     grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
