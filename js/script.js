@@ -6,7 +6,7 @@ const homeHeaderE1 = document.querySelector('.header__home');
 /* this is used to observe an Element*/
 const observer = new IntersectionObserver(function(entries) {
     const ent = entries[0];
-    console.log(ent);
+    
     if(!ent.isIntersecting){
         document.body.classList.add('sticky');
     }

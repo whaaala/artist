@@ -43,10 +43,6 @@ $bp-mobile-5: 22.68em; //363px   363px/16px = 22.68em
   grid-template-rows: 100vh repeat(4, min-content);
   grid-template-columns: [full-start]1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
   
-
-
-
-
   // display: grid;
   // grid-template-rows: 10vh 90vh 40vw 40vw repeat(3, min-content);
   // grid-template-columns: 1fr repeat(10, minmax(min-content, 30rem)) ;
@@ -92,6 +88,9 @@ $bp-mobile-5: 22.68em; //363px   363px/16px = 22.68em
   // }
 }
 
+.container.other {
+  grid-template-rows: 10vh repeat(3, min-content) !important;
+}
 /*
 $breakpoint arguement choices:
  - Phone 
@@ -125,43 +124,47 @@ html {
     
   }
 
-  .u-margin-bottom-big {
+.u-margin-bottom-big {
     margin-bottom: 8rem;
-  }
+}
 
-  .u-margin-bottom-small {
+.u-margin-bottom-small {
     margin-bottom: 1.5rem !important;
-  }
+}
 
-  .u-margin-top-small {
-    margin-top: 1rem !important;
-  }
+.u-margin-top-small {
+    margin-bottom: 1.5rem !important;
+}
 
-  .heading-secondary {
+.u-margin-top-big {
+    margin-top: 5rem !important;
+}
+
+.heading-secondary {
     font-size: 3.9rem;
     font-weight: 500;
     text-transform: capitalize;
     margin: 3rem 0;
-  }
+}
 
-  .sticky  .heading-secondary {
+.sticky  .heading-secondary {
     margin: 1rem 0;
-  }
+}
 
-  .heading-tertiary {
+.heading-tertiary {
     font-weight: 700;
     text-transform: uppercase;
-  }
+}
 
-  .paragraph {
+.paragraph {
     font-size: 1.6rem;
-  }
+}
 
-  .paragraph:not(:last-child) {
+.paragraph:not(:last-child) {
     margin-bottom: 3rem;
-  }
+}
 
-  .btn-text {
+.btn-text {
     &:link,
     &:visited {
       font-size: $default-font-size;
@@ -186,9 +189,9 @@ html {
       box-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.15);
       transform: translateY(0);
     }
-  }
+}
 
-  .action {
+.action {
     grid-column: center-start / center-end;
 
     &__center{
@@ -206,3 +209,17 @@ html {
     }
 }
 
+.sticky{
+  &__nav{
+    position: fixed;
+  }
+
+}
+
+.image-height {
+  height: 32rem !important;
+}
+
+.image-height_x {
+  height: 34rem !important;
+}
