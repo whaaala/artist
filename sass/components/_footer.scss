@@ -1,3 +1,14 @@
+// .page{
+//     &__footer {
+//         background-color: red;
+//         height: 10px;
+//         width: 100%;
+//         grid-column: 3;
+//         grid-row: 3;
+
+//     }
+// } 
+
 .footer {
     background-color: rgba(245, 241, 245, 0.521);
     grid-column: full-start / full-end;
