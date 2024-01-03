@@ -1,0 +1,201 @@
+.about-page {
+    .sticky &__header {
+        position: fixed;
+        margin-top: 8rem;
+    }
+}
+
+.about-page {
+    background-color: $color-white-1;
+    grid-column: full-start / full-end;
+    grid-row: 1;
+
+    display: grid;
+    grid-template-columns: [full-start]1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
+
+    &__header {
+        grid-column: full-start / full-end;
+        background-image: linear-gradient(
+        rgba(24, 24, 24, 0),
+        rgba(24, 24, 24, 0.266)
+      ),
+      url(/img/tsax-18.jpg);
+    background-size: cover;
+    background-position:top;
+    background-repeat: no-repeat;
+    height: 70vh;
+    margin-top: -19rem;
+    }
+
+    &__bio{
+
+        &__intro{
+            grid-column: center-start / center-end;
+            margin: 1.5rem -8rem;
+            text-align: justify;
+            font-size: 1.8rem;
+            
+            & span {
+                font-weight: bold;
+            }
+        }
+
+        &__journey{
+            grid-column: center-start / center-end;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 1rem;
+
+            &__image {
+                grid-column: 1;
+                &__img {
+                    width: 36rem;
+                    object-fit: cover;
+                    border-radius: 2%;
+                    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+                    margin-left: 11rem;
+                }
+            }
+
+            &__content {
+                grid-column: 2;
+                margin-left: -6rem;
+                margin-right: 5rem;
+
+                &__header {
+                    font-size: 1.6rem;
+                    line-height: 2.2rem;
+                    margin-bottom: 1rem;
+                    letter-spacing: .1rem;
+                    text-align: justify;
+                    font-weight: 700;
+                    margin-top: 0.3rem;
+                    text-transform: capitalize;
+                }
+
+                &__text {
+                    font-size: 1.6rem;
+                    line-height: 2.46rem;
+                    margin-bottom: 3.5rem;
+                    letter-spacing: .1rem;
+                    margin-top: 0.3rem;
+                    text-align: justify;
+                }
+
+                &__text:last-child {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        &__solo {
+            grid-column:  full-start / full-end;
+            background-color: rgba(12, 12, 13, 0.021);
+            margin-top: 2rem;
+
+            display: grid;
+            grid-template-columns: [full-start]1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
+            
+            &__header {
+                grid-column:  center-start / center-end;
+                margin: 0 auto;
+                font-size: 3.5rem;
+                font-weight: 500;
+                text-transform: capitalize;
+                margin-top: 1rem;
+            }
+
+            &__content {
+                grid-column: center-start / center-end;
+                margin-top: 2rem;
+
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                &__image {
+                    grid-column: 1;
+
+                    &__img {
+                        width: 60rem;
+                        object-fit: cover;
+                        border-radius: 2%;
+                        box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+                        margin-left: -5rem;
+                        height: 39rem;
+                    }
+                }
+
+                &__section {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 2rem;
+
+                    &__text {
+                        font-size: 1.6rem;
+                        line-height: 2.46rem;
+                        margin-bottom: 3.5rem;
+                        letter-spacing: .1rem;
+                        margin-top: 0.3rem;
+                        text-align: justify;
+                        margin-right: -5rem;
+                    }
+    
+                    &__text:first-child {
+                        margin-top: 2.7rem;
+                    }
+                    &__text:last-child {
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                &__section-1{
+                    grid-column: 1;
+                    margin-left: 2rem;
+                    
+                    &__text {
+                        font-size: 1.6rem;
+                        line-height: 2.46rem;
+                        margin-bottom: 3.5rem;
+                        letter-spacing: .1rem;
+                        margin-right: 1rem;
+                        text-align: justify;
+                        margin-left: -7rem;
+                    }
+                    
+                    &__text:first-child {
+                        margin-top: 4rem;
+                    }
+                    &__text:last-child {
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                &__image-1 {
+                    grid-column: 2;
+                    margin-left: 2rem;
+
+                    &__img-1 {
+                        width: 58rem;
+                        object-fit: cover;
+                        object-position: top;
+                        border-radius: 2%;
+                        box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+                        margin-right: -8rem;
+                        height: 40rem;
+                    }
+                }
+            }
+
+            &__content:last-child {
+                margin-bottom: 2rem;
+            }
+        }
+
+        
+        
+    }
+
+    &__footer{
+        grid-row: 5;  
+    }
+}
