@@ -1,0 +1,103 @@
+.gallery-page {
+    background-color: $color-white-1;
+    grid-column: full-start / full-end;
+   
+    display: grid;
+    grid-template-columns: [full-start]1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
+    margin-top: 10rem;
+
+    .sticky &__header {
+        position: fixed;
+        margin-top: 8rem;
+    }
+
+    &__popup > img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: .2rem solid #fff;
+        border-radius: .5rem;
+        object-fit: cover;
+        width: 27vw;
+    }
+
+    &__gallery {
+        grid-column: center-start / center-end;
+        margin: 0 -18rem;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        grid-auto-rows: 14rem;
+        grid-gap: 1rem;
+
+        &__item {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            
+        }
+
+     
+        &__item > img { 
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            transition: .2s linear;
+        }
+
+        &__item > img:hover {
+            transform: scale(1.032);
+        }
+        
+        &__item--4c2r {
+            grid-column: span 4;
+            grid-row: span 2;
+        }
+
+        &__item--3c4r {
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+
+        &__item--3c2r {
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+
+        &__item--3c3r {
+            grid-column: span 3;
+            grid-row: span 3;
+        }
+
+        &__item--2c3r {
+            grid-column: span 2;
+            grid-row: span 3;
+        }
+
+        &__item--2c2r {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        &__item--2c {
+            grid-column: span 2;
+        }
+
+        &__item--2r {
+            grid-row: span 2;
+        }
+
+        &__item--l {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        &__item--3c2r {
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+    }   
+}
