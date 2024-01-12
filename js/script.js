@@ -1,27 +1,4 @@
 ///////////////////////////////////////////////////////////
-// Sticky navigation
-
-const homeHeaderE1 = document.querySelector('.header__home');
-
-/* this is used to observe an Element*/
-const observer = new IntersectionObserver(function(entries) {
-    const ent = entries[0];
-    
-    if(!ent.isIntersecting){
-        document.body.classList.add('sticky');
-    }
-    if(ent.isIntersecting){
-        document.body.classList.remove('sticky');
-    }
-},{
-    root:null, /* Null: means the Element to observe will be observed inside of the ViewPort */
-    threshold: 0, /* 0: means an Event will be fired as soon as the Element been observed reaches 0% on the viewport (meaning the Element is no longer visible on the Screen)*/
-    rootMargin:'-80px', /* this is used to apply margin outside of the root(the viewport)-- IT HAS TO BE IN PIXEL, and the Valuehas to be the Height set for the Navigational menu in the CSS Rule for the sticky Rule*/
-});
-
-observer.observe(homeHeaderE1);
-
-///////////////////////////////////////////////////////////
 // Smooth Scrolling animation
 
 const allLinks =
@@ -51,9 +28,39 @@ allLinks.forEach(function (link) {
     }
 
     //close Mobile navigation menu
-    if (link.classList.contains("home__navbar__nav__wrapper__nav-link"))
-      headerEl.classList.toggle("nav-open");
+    // if (link.classList.contains("home__navbar__nav__wrapper__nav-link"))
+    //   headerEl.classList.toggle("nav-open");
   });
 });
 
 ///////////////////////////////////////////////////////////
+//Gallery picture close button
+const imgSelection = document.querySelectorAll(".gallery-page__gallery img");
+const popupWin = document.querySelector(".container__popup");
+const imgpopup = document.querySelector(".gallery-page__popup img");
+
+imgSelection.forEach((img) => {
+  img.addEventListener("click", function () {
+    popupWin.style.display = "block";
+    imgpopup.src = img.getAttribute("src");
+    imgpopup.alt = img.getAttribute("alt");
+  });
+});
+///////////////////////////////////////////////////////////
+//Gallery picture close button
+const galleryClosebtn = document.querySelector(".container__popup__close-btn");
+
+//Gallery picture overlay
+const galleryoverlay = document.querySelector(".container__popup");
+
+if (typeof galleryClosebtn != "undefined" && galleryClosebtn != null) {
+  galleryClosebtn.addEventListener("click", function () {
+    galleryoverlay.style.display = "none";
+  });
+}
+
+if (typeof galleryoverlay != "undefined" && galleryClosebtn != null) {
+  galleryoverlay.addEventListener("click", function () {
+    galleryoverlay.style.display = "none";
+  });
+}
