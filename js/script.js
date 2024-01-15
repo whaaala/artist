@@ -34,10 +34,13 @@ allLinks.forEach(function (link) {
 });
 
 ///////////////////////////////////////////////////////////
-//Gallery picture close button
+//Gallery picture pop up
 const imgSelection = document.querySelectorAll(".gallery-page__gallery img");
 const popupWin = document.querySelector(".container__popup");
 const imgpopup = document.querySelector(".gallery-page__popup img");
+const vSelection = document.querySelectorAll(".video-page__videos img");
+const vPlayBtn = document.querySelectorAll(".video-page__videos ion-icon");
+const vPopup = document.querySelector(".video-page__popup iframe");
 
 imgSelection.forEach((img) => {
   img.addEventListener("click", function () {
@@ -46,7 +49,7 @@ imgSelection.forEach((img) => {
     imgpopup.alt = img.getAttribute("alt");
   });
 });
-///////////////////////////////////////////////////////////
+
 //Gallery picture close button
 const galleryClosebtn = document.querySelector(".container__popup__close-btn");
 
@@ -56,11 +59,39 @@ const galleryoverlay = document.querySelector(".container__popup");
 if (typeof galleryClosebtn != "undefined" && galleryClosebtn != null) {
   galleryClosebtn.addEventListener("click", function () {
     galleryoverlay.style.display = "none";
+
+    if(typeof vPopup != "undefined" && vPopup != null){
+      vPopup.removeAttribute("src");
+    }
   });
 }
 
 if (typeof galleryoverlay != "undefined" && galleryClosebtn != null) {
   galleryoverlay.addEventListener("click", function () {
     galleryoverlay.style.display = "none";
+    
+    if(typeof vPopup != "undefined" && vPopup != null){
+      vPopup.removeAttribute("src");
+    }
   });
 }
+///////////////////////////////////////////////////////////
+//Gallery video pop up
+vSelection.forEach((img) => {
+  img.addEventListener("click", function () {
+    popupWin.style.display = "block";
+    const embed = img.getAttribute("embed")
+    const src=`https://www.youtube.com/embed/${embed}?autoplay=1&rel=0&autoplay=1&controls=1&modestbranding=1`
+    vPopup.src = src;
+  })
+})
+
+vPlayBtn.forEach((icon) => {
+  icon.addEventListener("click", function () {
+    console.log(icon.parentNode.parentNode.firstElementChild);
+    popupWin.style.display = "block";
+    const embed = icon.parentNode.parentNode.firstElementChild.getAttribute("embed")
+    const src=`https://www.youtube.com/embed/${embed}?autoplay=1&rel=0&autoplay=1&controls=1&modestbranding=1`
+    vPopup.src = src;
+  })
+})
