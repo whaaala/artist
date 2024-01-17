@@ -50,6 +50,7 @@ const vPopup = document.querySelector(".video-page__popup iframe");
 const vP = document.querySelector(".video-page__popup");
 const video = document.createElement("video");
 const source = document.createElement("source");
+const vEl = document.querySelector('video')
 
 ///////////////////////////////////////////////////////////
 //home header video pop up
@@ -96,23 +97,20 @@ if (typeof galleryClosebtn != "undefined" && galleryClosebtn != null) {
     
     if(typeof video != "undefined" && video != null){
       video.remove();
+      source.remove();
     }
   });
 }
 
-if (typeof galleryoverlay != "undefined" && galleryClosebtn != null) {
-  galleryoverlay.addEventListener("click", function () {
-    galleryoverlay.style.display = "none";
+// if (typeof galleryoverlay != "undefined" && galleryClosebtn != null) {
+//   galleryoverlay.addEventListener("click", function () {
+//     galleryoverlay.style.display = "none";
     
-    if(typeof vPopup != "undefined" && vPopup != null){
-      vPopup.removeAttribute("src");
-    }
-
-    if(typeof video != "undefined" && video != null){
-      video.remove();
-    }
-  });
-}
+//     if(typeof vPopup != "undefined" && vPopup != null){
+//       vPopup.removeAttribute("src");
+//     }
+//   });
+// }
 ///////////////////////////////////////////////////////////
 //Gallery video pop up
 vSelection.forEach((img) => {

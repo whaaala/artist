@@ -1702,3 +1702,5 @@ body {
     object-fit: cover;
     width: 60vw;
     height: 72vh; }
+  .video-page__popup > video > source {
+    z-index: 9999999; }
