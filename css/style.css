@@ -1691,4 +1691,14 @@ body {
     border-radius: .5rem;
     object-fit: cover;
     width: 60vw;
-    height: 69vh; }
+    height: 72vh; }
+  .video-page__popup > video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0.18rem solid #2f2121;
+    border-radius: .5rem;
+    object-fit: cover;
+    width: 60vw;
+    height: 72vh; }
