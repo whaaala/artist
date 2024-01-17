@@ -28,6 +28,50 @@
         grid-row-gap: 2.4rem;
         grid-column-gap: .5rem;
         padding: 1.5rem 3rem;
+        margin: 0 3.4%;
+
+        &__item {
+            margin: 0 auto;
+            height: 24rem;
+
+            &__play-btn {
+                position: relative;
+                width: 8rem;
+                top: -17rem;
+                left: 15.7rem;
+                border: 11px solid rgba(255, 255, 255, 0.45);
+                border-radius: 50%;
+                height: 8rem;
+                background-image: linear-gradient(18deg, rgba(242, 242, 244, 0.01), rgba(126, 134, 135, .01));
+                cursor: pointer;
+            }
+
+            &__play-btn:hover {
+                background-image: linear-gradient(18deg, rgba(241, 241, 255, 0.777), rgba(252, 255, 255, 0.411));
+            }
+
+            &__play-btn ion-icon {
+                color: whitesmoke;
+                width: 6rem;
+                height: 6rem;
+                cursor: pointer;
+                font-weight: 800;
+                margin: auto;
+            }
+
+            &__play-btn ion-icon:hover {
+                color: rgb(255, 255, 255);
+                font-weight: 900;
+
+            }
+        }
+
+        &__item img {
+            width: 41rem;
+            border-radius: 2rem;
+            height: 23rem;
+            box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+        }
 
         &__card {
             height: 25.3rem;

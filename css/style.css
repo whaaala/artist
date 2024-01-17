@@ -131,7 +131,7 @@ html {
   .action__center {
     text-align: center; }
   .sticky .action__center {
-    margin-top: -3rem; }
+    margin-top: -3.2rem; }
   .action__btn {
     font-size: 2.5rem !important;
     margin-top: 2rem;
@@ -594,6 +594,34 @@ body {
     inset: 0rem;
     background-image: var(--mask-gradient, linear-gradient(to top, black, rgba(0, 0, 0, 0) 1px));
     z-index: 2; }
+  .header__popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 5555555;
+    display: none; }
+    .header__popup__close-btn {
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      font-size: 6rem;
+      font-weight: bolder;
+      color: #fff;
+      cursor: pointer;
+      z-index: 66666666; }
+  .header__video > video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0.18rem solid #2f2121;
+    border-radius: .5rem;
+    object-fit: cover;
+    width: 60vw;
+    height: 72vh; }
 
 .sticky .navbar {
   position: fixed;
@@ -693,7 +721,38 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 2.4rem;
     grid-column-gap: .5rem;
-    padding: 1.5rem 3rem; }
+    padding: 1.5rem 3rem;
+    margin: 0 3.4%; }
+    .videos__video__item {
+      margin: 0 auto;
+      height: 24rem; }
+      .videos__video__item__play-btn {
+        position: relative;
+        width: 8rem;
+        top: -17rem;
+        left: 15.7rem;
+        border: 11px solid rgba(255, 255, 255, 0.45);
+        border-radius: 50%;
+        height: 8rem;
+        background-image: linear-gradient(18deg, rgba(242, 242, 244, 0.01), rgba(126, 134, 135, 0.01));
+        cursor: pointer; }
+      .videos__video__item__play-btn:hover {
+        background-image: linear-gradient(18deg, rgba(241, 241, 255, 0.777), rgba(252, 255, 255, 0.411)); }
+      .videos__video__item__play-btn ion-icon {
+        color: whitesmoke;
+        width: 6rem;
+        height: 6rem;
+        cursor: pointer;
+        font-weight: 800;
+        margin: auto; }
+      .videos__video__item__play-btn ion-icon:hover {
+        color: white;
+        font-weight: 900; }
+    .videos__video__item img {
+      width: 41rem;
+      border-radius: 2rem;
+      height: 23rem;
+      box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px; }
     .videos__video__card {
       height: 25.3rem;
       width: 45rem;
@@ -1692,15 +1751,3 @@ body {
     object-fit: cover;
     width: 60vw;
     height: 72vh; }
-  .video-page__popup > video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 0.18rem solid #2f2121;
-    border-radius: .5rem;
-    object-fit: cover;
-    width: 60vw;
-    height: 72vh; }
-  .video-page__popup > video > source {
-    z-index: 9999999; }
