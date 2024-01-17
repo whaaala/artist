@@ -237,4 +237,38 @@
     background-image: var(--mask-gradient, linear-gradient(to top, black, rgba(0, 0, 0, 0) 1px));
     z-index: 2;
   }
+
+  &__popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.9);
+    height: 100%;
+    width: 100%;
+    z-index: 5555555;
+    display: none;
+
+    &__close-btn {
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      font-size: 6rem;
+      font-weight: bolder;
+      color: #fff;
+      cursor: pointer;
+      z-index: 66666666;
+    }
+  }
+
+  &__video > video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0.18rem solid #2f2121;
+    border-radius: .5rem;
+    object-fit: cover;
+    width: 60vw;
+    height: 72vh;
+  }
 }
