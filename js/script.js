@@ -41,11 +41,15 @@ allLinks.forEach(function (link) {
 
 ///////////////////////////////////////////////////////////
 const homeheaderPlay = document.querySelector(".header__home__btn--play");
+const headerPopupWin = document.querySelector(".header__popup");
 const hVideoBtn = document.querySelectorAll(".videos__video__item__play-btn");
+const hgImg = document.querySelectorAll(".gallery__picture__item");
+const hgPopup = document.querySelector(".gallery__popup") 
+const hgPopupPic = document.querySelector(".gallery__popup img") 
+const hgPopupClosebtn = document.querySelector(".gallery__popup__close-btn");
 
 const imgSelection = document.querySelectorAll(".gallery-page__gallery img");
 const popupWin = document.querySelector(".container__popup");
-const headerPopupWin = document.querySelector(".header__popup");
 const imgpopup = document.querySelector(".gallery-page__popup img");
 const vSelection = document.querySelectorAll(".video-page__videos img");
 const vPlayBtn = document.querySelectorAll(".video-page__videos ion-icon");
@@ -73,6 +77,8 @@ if (typeof homeheaderPlay != "undefined" && homeheaderPlay != null) {
   })
 }
 
+///////////////////////////////////////////////////////////
+//home video pop up
 hVideoBtn.forEach((btn) => {
   btn.addEventListener("click", function () {
     popupWin.style.display = "block";
@@ -82,6 +88,29 @@ hVideoBtn.forEach((btn) => {
   })
 })
 
+///////////////////////////////////////////////////////////
+//home gallery  pop up
+hgImg.forEach((img) => {
+  img.addEventListener("click", function () {
+    hgPopup.style.display = "block";
+    hgPopupPic.src = img.firstElementChild.getAttribute("src");
+    hgPopupPic.alt = img.firstElementChild.getAttribute("alt");
+  })
+})
+
+if (typeof hgPopupClosebtn != "undefined" && hgPopupClosebtn != null) {
+  hgPopupClosebtn.addEventListener("click", function () {
+    hgPopup.style.display = "none";
+  })
+}
+
+if (typeof hgPopup != "undefined" && hgPopup != null) {
+  hgPopup.addEventListener("click", function () {
+    hgPopup.style.display = "none";
+  });
+}
+
+  
 ///////////////////////////////////////////////////////////
 //Gallery image pop up
 imgSelection.forEach((img) => {

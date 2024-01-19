@@ -11,6 +11,7 @@
 
         &__center-heading {
             text-align: center;
+            margin-bottom: 2.5rem;
         }
     }
 
@@ -82,16 +83,52 @@
             object-fit: cover;
             display: block; // make it a block element 
             border-radius: .7rem;
+            cursor: pointer;
         }
     }
 
     .sticky &__picture{
-      grid-template-rows: repeat(7, 9vh);
+      grid-template-rows: repeat(7, 8.8vh);
       gap: 0.9rem;
-      padding: 0rem 1.5rem;
+      padding: 0rem 4.5rem;
     }
 
     .sticky &__action {
       margin-top: 2.4rem;
     }
+
+    &__popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,.9);
+      height: 100%;
+      width: 100%;
+      z-index: 5555555;
+      display: none;
+  
+      &__close-btn {
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        font-size: 6rem;
+        font-weight: bolder;
+        color: #fff;
+        cursor: pointer;
+        z-index: 66666666;
+      }
+
+      &__img > img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: .2rem solid #fff;
+        border-radius: .5rem;
+        object-fit: cover;
+        width: 27vw;
+    
+    }
+
+  }
 }
